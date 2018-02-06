@@ -51,10 +51,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FinishBlock.cs" />
+     <Compile Include="Assets\Scripts\FinishBlock.cs" />
      <Compile Include="Assets\Scripts\FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\ManageMusic.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\SpawnBlock.cs" />
+     <Compile Include="Assets\Scripts\SpikedWall.cs" />
      <None Include="Assets\resources.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

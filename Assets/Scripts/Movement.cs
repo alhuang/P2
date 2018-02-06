@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour {
 	Vector3 pos;
 	Transform tr;
 	bool[] raycasts;
+	public AudioClip movingsound;
 
 	// Use this for initialization
 	void Start () {
@@ -29,21 +30,25 @@ public class Movement : MonoBehaviour {
 			{
 				if (!raycasts[2])
 					pos += Vector3.right;
+				//AudioSource.PlayClipAtPoint(movingsound, transform.position);
 			}
 			else if (Input.GetKey(KeyCode.LeftArrow) && tr.position == pos)
 			{
 				if (!raycasts[0])
 					pos += Vector3.left;
+				//AudioSource.PlayClipAtPoint(movingsound, transform.position);
 			}
 			else if (Input.GetKey(KeyCode.UpArrow) && tr.position == pos)
 			{
 				if (!raycasts[1])
 					pos += Vector3.forward;
+				//AudioSource.PlayClipAtPoint(movingsound, transform.position);
 			}
 			else if (Input.GetKey(KeyCode.DownArrow) && tr.position == pos)
 			{
 				if (!raycasts[3])
 					pos += Vector3.back;
+				//AudioSource.PlayClipAtPoint(movingsound, transform.position);
 			}
 
 			transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * speed);
